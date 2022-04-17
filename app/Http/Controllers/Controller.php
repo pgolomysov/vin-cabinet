@@ -10,4 +10,18 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    protected function response(mixed $data, bool $success = true, string $message = '')
+    {
+        $response = [
+            'success' => $success,
+            'data' => $data,
+        ];
+
+        if ($message) {
+            $response['message'] = $message;
+        }
+
+        return response()->json($response, $success ? 200 : 500);
+    }
 }
