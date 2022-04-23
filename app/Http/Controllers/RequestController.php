@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Facades\Sources;
 use App\Http\Requests\RequestStoreRequest;
-use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\JsonResponse;
 use \App\Models\Request as RequestModel;
@@ -19,12 +19,10 @@ class RequestController extends Controller
 
     public function store(RequestStoreRequest $request)
     {
-        $attributes = array_merge(['user_id' => 1],$request->validated());
+        $model = RequestModel::createWithDefaultUser($request->validated());
 
-        try {
-            $model = RequestModel::create($attributes);
-        } catch (QueryException $e) {
-            return $this->response([], false, 'Error occurred while saving request');
+        if ($model) {
+            Sources::createAndPushToQueueAll($model);
         }
 
         return $this->response($model);
