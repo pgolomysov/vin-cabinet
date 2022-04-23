@@ -2,9 +2,9 @@
 
 namespace App\Services\Sources;
 
-use App\Jobs\SourceTaskJob;
 use App\Models\Request;
-use App\Services\SourceLib\Dto\SourceTask;
+use Vin\SourcesLib\Dto\SourceTask;
+use Vin\SourcesLib\Jobs\SourceTaskJob;
 
 class Sources
 {

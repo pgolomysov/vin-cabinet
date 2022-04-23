@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e929ba9be87bd34d1bd0c14da158c54d",
+    "content-hash": "4ea7242f8f0e92631fb6a4ed56c6847c",
     "packages": [
         {
             "name": "brick/math",
@@ -5176,6 +5176,36 @@
             "time": "2021-12-08T09:12:39+00:00"
         },
         {
+            "name": "vin/sources-lib",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pgolomysov/vin-sources-lib.git",
+                "reference": "7a9cbd1d7bdc88e51a391b115e141eb4b731b043"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pgolomysov/vin-sources-lib/zipball/7a9cbd1d7bdc88e51a391b115e141eb4b731b043",
+                "reference": "7a9cbd1d7bdc88e51a391b115e141eb4b731b043",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^9.2"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Vin\\SourcesLib\\": "sources-lib/src"
+                }
+            },
+            "support": {
+                "source": "https://github.com/pgolomysov/vin-sources-lib/tree/master",
+                "issues": "https://github.com/pgolomysov/vin-sources-lib/issues"
+            },
+            "time": "2022-04-23T16:07:11+00:00"
+        },
+        {
             "name": "vladimir-yuldashev/laravel-queue-rabbitmq",
             "version": "v12.0.1",
             "source": {
@@ -8104,7 +8134,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "vin/sources-lib": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
