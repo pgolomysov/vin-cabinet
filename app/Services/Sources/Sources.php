@@ -10,7 +10,7 @@ class Sources
 {
     private $sources = [
         'gibdd',
-        'nomerogram'
+       // 'nomerogram'
     ];
 
     public function createAndPushToQueueAll(Request $model)

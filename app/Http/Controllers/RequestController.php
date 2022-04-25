@@ -14,7 +14,7 @@ class RequestController extends Controller
 
     public function index(): JsonResponse
     {
-        return response()->json(["test" => 1]);
+        return $this->response(RequestModel::with('reports')->get());
     }
 
     public function store(RequestStoreRequest $request)

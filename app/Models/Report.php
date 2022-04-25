@@ -11,6 +11,8 @@ class Report extends Model
 
     protected $table = "report";
 
+    protected $fillable = ['request_id', 'status', 'data', 'source'];
+
     public function request()
     {
         return $this->hasOne(Request::class);

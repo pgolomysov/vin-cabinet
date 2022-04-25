@@ -8,6 +8,7 @@ services:
             args:
                 WWWGROUP: '${WWWGROUP}'
         image: sail-8.1/app
+        #command: php artisan rabbitmq:consume --queue=reports
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         ports:
@@ -23,9 +24,7 @@ services:
             - vin
         depends_on:
             - mysql
-            - redis
-            - meilisearch
-            - selenium
+            - rabbitmq
     mysql:
         image: 'mysql/mysql-server:8.0'
         ports:

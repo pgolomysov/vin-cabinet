@@ -5181,12 +5181,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pgolomysov/vin-sources-lib.git",
-                "reference": "7a9cbd1d7bdc88e51a391b115e141eb4b731b043"
+                "reference": "4ad9882dc21077aafcfc39f13aa188e4ef0acda2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pgolomysov/vin-sources-lib/zipball/7a9cbd1d7bdc88e51a391b115e141eb4b731b043",
-                "reference": "7a9cbd1d7bdc88e51a391b115e141eb4b731b043",
+                "url": "https://api.github.com/repos/pgolomysov/vin-sources-lib/zipball/4ad9882dc21077aafcfc39f13aa188e4ef0acda2",
+                "reference": "4ad9882dc21077aafcfc39f13aa188e4ef0acda2",
                 "shasum": ""
             },
             "require": {
@@ -5203,7 +5203,7 @@
                 "source": "https://github.com/pgolomysov/vin-sources-lib/tree/master",
                 "issues": "https://github.com/pgolomysov/vin-sources-lib/issues"
             },
-            "time": "2022-04-23T16:07:11+00:00"
+            "time": "2022-04-25T10:32:05+00:00"
         },
         {
             "name": "vladimir-yuldashev/laravel-queue-rabbitmq",

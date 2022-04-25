@@ -22,6 +22,6 @@ class Request extends Model
 
     public function reports()
     {
-        $this->hasMany(Report::class);
+        return $this->hasMany(Report::class);
     }
 }
