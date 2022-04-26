@@ -35,11 +35,14 @@ Due to time limit, services needs some improvements:
 ## How to run
 
 **Vin-cabinet:**
-1) docker-compose up -d
+1) docker-compose up -d rabbitmq
 2) Then creating queue "reports" in rabbitmq: http://localhost:15672/ guest/guest
-3) Run command in laravel container: "php artisan rabbitmq:consume --queue=reports" - there is some problem
-to run in from command section in docker-composer
-4) Run php artisan db:seed inside laravel container
+3) docker-compose up -d
+4) Run command in laravel container 
+`docker exec -ti vin-cabinet-vin-cabinet-1 /bin/bash`
+   `php artisan rabbitmq:consume --queue=reports `
+There is some problem to run in from command section in docker-composer
+5) Run php artisan db:seed inside laravel container
 
 **Vin-sources:**
 1) docker-compose up -d
@@ -51,9 +54,9 @@ Or run requests manually:
 2) Get specific request - GET http://localhost/api/request/145
 3) Create new request - POST http://localhost/api/request
 
-[   {
+`   {
    "vin": "1FABP21B4CK165368",
    "car_number": "B738TO077"
-   }]()
+   }`
 
 You need to create new request, wait 2-3 secs and check that request - you will to see request + report for this request.

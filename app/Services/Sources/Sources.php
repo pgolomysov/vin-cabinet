@@ -5,12 +5,13 @@ namespace App\Services\Sources;
 use App\Models\Request;
 use Vin\SourcesLib\Dto\SourceTask;
 use Vin\SourcesLib\Jobs\SourceTaskJob;
+use Vin\SourcesLib\Enum\Sources as SourcesEnum;
 
 class Sources
 {
     private $sources = [
-        'gibdd',
-       // 'nomerogram'
+        SourcesEnum::Gibdd,
+        SourcesEnum::Nomerogram,
     ];
 
     public function createAndPushToQueueAll(Request $model)
