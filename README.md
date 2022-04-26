@@ -60,3 +60,6 @@ Or run requests manually:
    }`
 
 You need to create new request, wait 2-3 secs and check that request - you will to see request + report for this request.
+
+Example: request with sources:
+![img.png](docs/example.png)
