@@ -28,13 +28,8 @@ class RequestController extends Controller
         return $this->response($model);
     }
 
-    public function show(): JsonResponse
+    public function show(int $id): JsonResponse
     {
-        return response()->json(["test" => 3]);
-    }
-
-    public function destroy(): JsonResponse
-    {
-        return response()->json(["test" => 4]);
+        return $this->response(RequestModel::with('reports')->find($id));
     }
 }

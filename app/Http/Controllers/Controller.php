@@ -22,7 +22,7 @@ class Controller extends BaseController
             $response['message'] = $message;
         }
 
-        //TODO: rewrite 500 response to exception, that caught in handler
+        //TODO: rewrite 500 response to exception, that caught in latavel handler
         return response()->json($response, $success ? 200 : 500);
     }
 }
